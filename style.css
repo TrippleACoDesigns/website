@@ -1,0 +1,139 @@
+/* ==========================================================================
+   TRIPPLE A CO. DESIGNS - HOME PAGE SPECIFIC STYLESHEET
+   ========================================================================== */
+
+.hero-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  /* Top light grey linear gradient seamlessly blended into the bottom mountain image */
+  background: 
+    linear-gradient(180deg, rgba(210, 215, 222, 0.95) 0%, rgba(180, 188, 196, 0.7) 45%, rgba(0, 0, 0, 0.1) 100%),
+    url('./media/images/IMG_4401.JPG.jpeg') no-repeat bottom center;
+  background-size: cover;
+  background-attachment: scroll;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fallback if file extension is .JPG */
+@supports not (background-image: url('./media/images/IMG_4401.JPG.jpeg')) {
+  .hero-page-wrapper {
+    background-image: 
+      linear-gradient(180deg, rgba(210, 215, 222, 0.95) 0%, rgba(180, 188, 196, 0.7) 45%, rgba(0, 0, 0, 0.1) 100%),
+      url('./media/images/IMG_4401.JPG');
+  }
+}
+
+/* Half-Visible Floating Globe Graphic on the Left */
+.globe-wrap {
+  position: absolute;
+  left: -18%;
+  top: 18%;
+  width: 42vw;
+  max-width: 580px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+.globe-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Central Hero Card Content */
+.hero-center-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-top: -1rem;
+}
+
+.hero-main-title {
+  font-size: clamp(3rem, 5.5vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #000000;
+  letter-spacing: -1.5px;
+  margin-bottom: 2rem;
+}
+
+/* Updated: White Pill Fields with Black Text & Stars */
+.white-pill-field {
+  width: 100%;
+  min-width: 320px;
+  max-width: 440px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Updated: White "Feel at home." Text */
+.feel-home-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 1.2rem 0 0.8rem;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-center-getstarted {
+  position: relative;
+  z-index: 10;
+  margin-top: 0.4rem;
+  padding: 0.75rem 2.4rem;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-center-getstarted:hover {
+  background: #222222;
+  transform: translateY(-2px);
+}
+
+/* Responsive Breakdown */
+@media (max-width: 992px) {
+  .globe-wrap {
+    width: 350px;
+    left: -22%;
+    top: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  .globe-wrap {
+    width: 240px;
+    left: -28%;
+    top: 15%;
+  }
+
+  .white-pill-field {
+    min-width: 280px;
+  }
+}

@@ -1,0 +1,460 @@
+/* ==========================================================================
+   TRIPPLE A CO. DESIGNS - PORTFOLIO & CLIENTS STYLESHEET
+   ========================================================================== */
+
+.portfolio-page-main {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: PORTFOLIO STACKS
+   -------------------------------------------------------------------------- */
+.portfolio-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: #f1f3f5;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-ambient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-purple {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(175, 80, 230, 0.25) 0%, rgba(241, 243, 245, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.glow-cyan {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(140, 200, 230, 0.3) 0%, rgba(241, 243, 245, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.portfolio-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 0.8fr 2.2fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.portfolio-intro-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.portfolio-main-heading {
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  color: #000000;
+  letter-spacing: -1.5px;
+}
+
+.portfolio-main-heading .purple-italic {
+  color: #ab47bc;
+  font-style: italic;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.btn-see-more-pill {
+  background: #000000;
+  color: #ffffff;
+  padding: 0.95rem 2.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-see-more-pill:hover {
+  background: #222222;
+  transform: translateY(-2px);
+}
+
+.portfolio-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.portfolio-stack-card {
+  border-radius: 32px;
+  padding: 1.5rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  min-height: 520px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-stack-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.3);
+}
+
+.card-logos { background: linear-gradient(180deg, #788896 0%, #5d6d7a 100%); }
+.card-social { background: linear-gradient(180deg, #a855f7 0%, #8b5cf6 100%); }
+.card-random { background: linear-gradient(180deg, #5b6770 0%, #434c53 100%); }
+
+.stack-card-header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.category-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.logos-preview-box {
+  background: #0f1215;
+  border-radius: 24px;
+  padding: 1.2rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.logo-grid-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.logo-grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.flyers-preview-frame {
+  background: #0f1215;
+  border-radius: 24px;
+  padding: 0.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow: hidden;
+}
+
+.flyer-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.flyer-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: COMPANIES AND BRANDS I HAVE WORKED WITH
+   -------------------------------------------------------------------------- */
+.clients-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #717d88 0%, #54606a 50%, #3e474f 100%);
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-bg-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.25;
+  overflow: hidden;
+}
+
+.clients-bg-texture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.clients-main-card {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  width: 100%;
+  background: rgba(220, 225, 230, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients-header-block {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #000000;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.clients-title .orange-italic {
+  color: #ff5500;
+  font-style: italic;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.btn-see-more-small {
+  background: #1a1e22;
+  color: #ffffff;
+  padding: 0.5rem 1.8rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-see-more-small:hover {
+  background: #000000;
+}
+
+.clients-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Individual Portrait Cards */
+.client-portrait-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  height: 420px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.client-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.client-card-caption {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 60%, #000000 100%);
+  padding: 1.5rem 0.8rem 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.client-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.client-sub {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+/* 5th Card: NISHA TS & Brands White Card */
+.brands-stack-card {
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  height: 420px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-top-preview {
+  position: relative;
+  height: 52%;
+  overflow: hidden;
+}
+
+.brand-top-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-preview-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.preview-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.preview-sub {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.companies-subblock {
+  padding: 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.companies-heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 0.8rem;
+}
+
+.company-logos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.company-brand-name {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.bold-suits { font-weight: 900; letter-spacing: 1px; }
+.bold-nash { font-weight: 900; font-style: italic; color: #ff0000; }
+.bold-topspin { font-weight: 800; color: #0077b6; }
+
+/* Responsive Breakdown */
+@media (max-width: 1100px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .portfolio-intro-block {
+    align-items: center;
+    text-align: center;
+  }
+
+  .clients-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .portfolio-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .clients-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
