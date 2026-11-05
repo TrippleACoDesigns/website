@@ -171,6 +171,10 @@
   aspect-ratio: 1;
 }
 
+.logo-grid-item.white-bg {
+  background: #ffffff;
+}
+
 .logo-grid-item img {
   max-width: 100%;
   max-height: 100%;
